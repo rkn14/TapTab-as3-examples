@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout name="DEMO_KeyboardMapping" id="DEMO_KeyboardMapping" version="1.0" author="Grégory Lardon" dpi="220">
+	
+
+
+	<!-- layer landscape -->	
+	<landscape>
+	
+		<bgColor>#222222</bgColor>
+		<bgCornerRadius>0</bgCornerRadius>			
+		<bgAlpha>1</bgAlpha>			
+
+	 
+		<!-- controls -->		
+		<controls>
+
+			<stick id="stickMain" type="4directions">
+				<bgRadius>200</bgRadius>
+				<stickRadius>70</stickRadius>
+				<bgColor>0XFF0000</bgColor>
+				<stickColor>0XFF0000</stickColor>
+				<bgAlpha>.6</bgAlpha>
+				<stickAlpha>.6</stickAlpha>
+				<align hcenter="0" vcenter="0" />
+				<label id="stickLabel" alpha=".5">
+					<text>CONTROL</text>
+					<style size="35" color="#FFFFFF" align="center" font="Arial" bold="true" />
+					<align hcenter="0" vcenter="0" />
+				</label> 
+			</stick>			
+		
+						 
+		</controls>		
+		
+	</landscape>
+	
+	
+	
+	 
+</layout>
