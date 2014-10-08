@@ -15,19 +15,35 @@
 		<controls>
 
 			<stick id="stickMain" type="4directions">
-				<bgRadius>200</bgRadius>
-				<stickRadius>70</stickRadius>
+				<bgRadius>150</bgRadius>
+				<stickRadius>50</stickRadius>
 				<bgColor>0XFF0000</bgColor>
 				<stickColor>0XFF0000</stickColor>
 				<bgAlpha>.6</bgAlpha>
 				<stickAlpha>.6</stickAlpha>
-				<align hcenter="0" vcenter="0" />
+				<align bottom="0" left="0" />
 				<label id="stickLabel" alpha=".5">
-					<text>CONTROL</text>
+					<text>L</text>
 					<style size="35" color="#FFFFFF" align="center" font="Arial" bold="true" />
 					<align hcenter="0" vcenter="0" />
 				</label> 
-			</stick>			
+			</stick>		
+			
+			<roundButton id="buttonA">
+			    <bgRadius>60</bgRadius>
+			    <buttonRadius>40</buttonRadius>
+			    <bgColor>0XFF0000</bgColor>
+			    <buttonColor>0XFF0000</buttonColor>
+			    <bgAlpha>.6</bgAlpha>
+			    <buttonAlpha>.6</buttonAlpha>
+			    <align bottom="0" right="0" />
+			    <label id="butALabel" alpha=".5">
+			        <text>A</text>
+			        <style size="35" color="#FFFFFF" align="center" font="Arial" bold="true" />
+			        <align hcenter="0" vcenter="0" />
+			    </label> 
+			    <action type="vibrate" trigger="touchDown" />
+			</roundButton>  
 		
 						 
 		</controls>		
