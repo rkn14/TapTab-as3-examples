@@ -12,6 +12,7 @@ package
 	import taptabcontroller.controller.vo.AbstractVO;
 	import taptabcontroller.controller.vo.ButtonVO;
 	import taptabcontroller.controller.vo.VOFactory;
+	import taptabcontroller.net.controller.TapTabController;
 	import taptabcontroller.net.controller.TapTabControllerConfigurationVO;
 	import taptabcontroller.net.controller.TapTabControllerEvent;
 	import taptabcontroller.net.controller.TapTabControllersManager;
@@ -100,13 +101,10 @@ package
 			var conf : TapTabControllerConfigurationVO = new TapTabControllerConfigurationVO();
 			conf.firstLayoutID = "LayoutHelloWorld";
 			conf.layouts.push(String(layoutXML));			
-			_taptabManager = new TapTabControllersManager("DEMO_HelloWorld", conf, new BMP_APP_ICON() as ByteArray);
+			_taptabManager = new TapTabControllersManager("DEMO_HelloWorld", conf, new BMP_APP_ICON() as ByteArray, 1);
 			_taptabManager.addEventListener(TapTabControllersManagerEvent.NEW_TAPTABCONTROLLER, _handler_TapTabControllersManager);
-			_taptabManager.start();
+			_taptabManager.start();			
 		}
-		
-		
-		
 		
 		
 		protected function _handler_TapTabControllersManager(event:TapTabControllersManagerEvent):void
@@ -128,7 +126,9 @@ package
 					switch(uivalue.controlId)
 					{
 						case "helloworld":
-							_helloworldTF.visible = ButtonVO(uivalue).pressed;
+							_helloworldTF.visible = ButtonVO(uivalue).pressed;							
+							// make the TapTab Controller vibrate in callback
+							(event.currentTarget as TapTabController).vibrate(10);
 							break;								
 					}
 					break;
@@ -136,18 +136,13 @@ package
 		}		
 		
 		
-		
-
-		
 		protected function _handler_AddedToStage(event:Event):void
 		{
 			removeEventListener(Event.ADDED_TO_STAGE, _handler_AddedToStage);
 			_build();
 		}
 		
-		
-		
-		
+
 		
 	}		
 	
