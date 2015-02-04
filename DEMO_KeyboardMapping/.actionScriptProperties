@@ -50,6 +50,7 @@
       </libraryPathEntry>
       <libraryPathEntry kind="3" linkType="1" path="${PROJECT_FRAMEWORKS}/locale/en_US/framework_rb.swc" useDefaultLinkType="false"/>
       <libraryPathEntry kind="3" linkType="1" path="/TapTabControllerApi/bin/TapTabControllerApi.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="1" path="assets/graphics.swc" useDefaultLinkType="false"/>
     </libraryPath>
     <sourceAttachmentPath/>
   </compiler>
